@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment1.params=
+comment1.target=void\ animation()
+comment2.params=
+comment2.target=void\ eatWorm()
+comment3.params=
+comment3.target=void\ turnAtEdge()
+comment4.params=
+comment4.target=void\ checkKeys()
+comment5.params=
+comment5.target=void\ checkWin()
+numComments=6
