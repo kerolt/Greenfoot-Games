@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Font;
+
 /**
  * 螃蟹血量类
  * 
@@ -18,7 +18,7 @@ public class HP extends Show {
     
     public void setHp(int score) {
         scoreImg.clear();
-        Font f = new Font("Comic Sans MS", 0,  30);
+        Font f = new Font("Comic Sans MS", true, false,  30);
         scoreImg.setFont(f);
         scoreImg.drawImage(new GreenfootImage("hp.png"), 30, 5);
         scoreImg.drawString(": " + score, 60, 30);

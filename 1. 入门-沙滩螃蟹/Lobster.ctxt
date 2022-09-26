@@ -1,15 +1,17 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Lobster\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment0.target=Lobster
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Lobster\ here.\r\n\ \r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=void\ randomMove()
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Lobster\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
-comment2.target=void\ turnAtEdge()
+comment2.target=void\ randomMove()
 comment3.params=
-comment3.target=void\ eatCrab()
+comment3.target=void\ turnAtEdge()
 comment4.params=
-comment4.target=void\ full()
+comment4.target=void\ eatCrab()
 comment5.params=
-comment5.target=void\ turnToCrab()
-numComments=6
+comment5.target=void\ full()
+comment6.params=
+comment6.target=void\ turnToCrab()
+numComments=7

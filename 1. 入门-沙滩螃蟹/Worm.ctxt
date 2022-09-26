@@ -1,8 +1,10 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Worm\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment0.target=Worm
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Worm\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=void\ animation()
-comment1.text=\r\n\ \u8BA9\u866B\u5B50\u626D\u8D77\u6765\r\n
-numComments=2
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Worm\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ animation()
+comment2.text=\r\n\ \u8BA9\u866B\u5B50\u626D\u8D77\u6765\r\n
+numComments=3

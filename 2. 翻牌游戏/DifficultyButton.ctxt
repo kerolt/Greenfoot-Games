@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=DifficultyButton
+comment0.text=\r\n\ \u96BE\u5EA6\u6309\u94AE\u7C7B\r\n
+comment1.params=difficulty
+comment1.target=DifficultyButton(java.lang.String)
+comment1.text=\r\n\ \u6839\u636E\u5F62\u53C2\u540D\u8BBE\u7F6E\u96BE\u5EA6\u56FE\u7247\r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ arrival()
+comment3.text=\r\n\ \u4E00\u70B9\u5C0F\u5C0F\u7684\u52A8\u753B\u6548\u679C\r\n
+comment4.params=
+comment4.target=void\ checkClick()
+comment4.text=\r\n\ \u4E3A\u6309\u94AE\u7ED1\u5B9A\u70B9\u51FB\u4E8B\u4EF6\uFF0C\u5E76\u8BBE\u7F6E\u96BE\u5EA6\u7CFB\u6570\r\n
+numComments=5
