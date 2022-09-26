@@ -1,4 +1,4 @@
-# Greenfoot-Games
+# greenfoot games
 
 **简介**：利用Greenfoot实现的一些小游戏
 
