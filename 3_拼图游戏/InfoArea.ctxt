@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=InfoArea
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ InfoArea\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=InfoArea()
+comment1.text=\r\n\ \u521B\u5EFA\u603B\u7684\u753B\u5E03\uFF0C\u540C\u65F6\u753B\u51FA\u8FB9\u754C\r\n
+comment2.params=
+comment2.target=void\ showImg()
+comment2.text=\r\n\ \u6DFB\u52A0\u76F8\u5E94\u7684\u6587\u5B57\u4FE1\u606F\r\n
+numComments=3

@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=ScoreBoard
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ScoreBoard\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=ScoreBoard()
+comment2.params=
+comment2.target=void\ showRecord()
+comment3.params=
+comment3.target=void\ addRecord()
+comment3.text=\r\n\ \u6DFB\u52A0\u8BB0\u5F55\r\n
+comment4.params=
+comment4.target=void\ sortRecord()
+comment4.text=\r\n\ \u5BF9\u8BB0\u5F55\u8FDB\u884C\u6392\u5E8F\r\n
+comment5.params=
+comment5.target=void\ writeToFile()
+comment5.text=\r\n\ \u5C06\u66F4\u65B0\u540E\u7684\u8BB0\u5F55\u5199\u5165\u6587\u4EF6\uFF0C\u4EE5\u4FBF\u5B9E\u73B0\u6570\u636E\u7684\u6301\u4E45\u5316\r\n
+comment6.params=
+comment6.target=void\ readFile()
+comment6.text=\r\n\ \u6253\u5F00\u5B58\u653E\u6709\u5173\u8BB0\u5F55\u7684\u6587\u4EF6\uFF0C\u5982\u679C\u4E0D\u5B58\u5728\uFF0C\u5219\u4F1A\u81EA\u52A8\u521B\u5EFA\uFF1B\u5E76\u8BFB\u53D6\u6587\u4EF6\u5185\u5BB9\r\n
+numComments=7

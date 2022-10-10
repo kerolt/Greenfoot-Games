@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=HardGameWorld
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ HardGameWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ started()
+comment2.params=
+comment2.target=void\ stopped()
+comment3.params=imgName
+comment3.target=HardGameWorld(java.lang.String)
+comment4.params=
+comment4.target=void\ resetPics()
+comment5.params=
+comment5.target=void\ act()
+numComments=6
