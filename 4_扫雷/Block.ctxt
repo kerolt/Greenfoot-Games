@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Block
+comment0.text=\r\n\ \u65B9\u5757\u7C7B\uFF0C\u5176\u4E2D20\u4E2A\u65B9\u5757\u4E0B\u85CF\u6709\u5730\u96F7\r\n
+comment1.params=
+comment1.target=boolean\ getFlag()
+comment2.params=
+comment2.target=void\ setBomb()
+comment3.params=
+comment3.target=boolean\ getBomb()
+comment4.params=
+comment4.target=void\ act()
+comment5.params=
+comment5.target=void\ checkMouse()
+comment6.params=block
+comment6.target=void\ openBlock(Block)
+comment7.params=block
+comment7.target=int\ getBombNumber(Block)
+numComments=8
