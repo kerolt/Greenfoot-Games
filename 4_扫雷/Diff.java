@@ -26,7 +26,10 @@ public class Diff extends Actor {
         changeSize();
         checkClick();
     }
-    
+
+    /**
+     * 改变图片大小，形成动画效果
+     */
     public void changeSize() {
         GreenfootImage img = getImage();
         int curWidth = img.getWidth();
@@ -43,6 +46,9 @@ public class Diff extends Actor {
         setImage(tempImage);
     }
     
+    /**
+     * 点击事件
+     */
     public void checkClick() {
         if (Greenfoot.mouseClicked(this)) {
             if (this.diffName == "easy") {
