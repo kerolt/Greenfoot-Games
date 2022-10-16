@@ -10,6 +10,7 @@ public class SelectButton extends Button {
     
     public void act() {
         if (Greenfoot.mouseClicked(this)) {
+            GameWorld.diff = 3;  // 自定义难度
             Greenfoot.setWorld(new CustomWorld());
         }
     }

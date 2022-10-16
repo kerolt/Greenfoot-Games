@@ -9,12 +9,19 @@ public class GameWorld extends World{
     private ArrayList<Block> blocks = new ArrayList<Block>();  //方块列表，管理游戏中所有方块
     public int m_bombNum; // 地雷数量
     public static int bombNum ;
+    public static boolean isOver = false;  // 游戏是否结束
+    public static int diff;  // 游戏难度
+    public static boolean end;  // true代表获胜，false代表失败
     
     //构造方法，用来为游戏世界添加初始对象
     public GameWorld(int row, int col, int bombNum){    
         super(34, 21, 25);    
         this.m_bombNum = bombNum;
         this.bombNum = bombNum;
+        Diff.row = row;
+        Diff.col = col;
+        Diff.bombNum = bombNum;
+        GameWorld.isOver = false;
         Block.isStartGame = false;
         Block.isFirstClick = true;
         int startX = 17 - row / 2;
@@ -46,7 +53,7 @@ public class GameWorld extends World{
     public void showAllBomb() {
         for (int i=0; i<this.m_bombNum; i++) {           //对于方块列表中的所有地雷方块，
             blocks.get(i).setImage("Bomb.png"); //将其图像设置为地雷
-            Greenfoot.delay(1);
+            //Greenfoot.delay(1);
         }
     }
     
@@ -57,8 +64,41 @@ public class GameWorld extends World{
                 return;                       //返回
             }            
         }
-        Greenfoot.playSound("win.wav");  //播放获胜的声音
-        Greenfoot.stop();                //游戏停止
+        gameOver(true);
+    }
+    
+    public void gameOver(boolean end) {
+        if (!end) {  // 如果游戏失败
+            showAllBomb();                     //显示世界中所有的地雷
+            Greenfoot.playSound("bomb.wav");         //播放爆炸音效
+            getObjects(SmileIcon.class).get(0).setImage("cry.png");
+        } else {
+            Greenfoot.playSound("win.wav");  //播放获胜的声音
+        }
+        GameWorld.isOver = true;
+        Greenfoot.delay(30);
+        addObject(new Board(), getWidth() / 2, getHeight() / 2 + 1);
+        if (!end) {
+            addObject(new FailIcon(), 12, 8);
+        } else {
+            addObject(new SuccessIcon(), 12, 8);
+        }
+        showText("" + TimeText.playTime, 23, 10);
+        showText("" + Diff.bombNum, 10, 15);
+        showText("" + Diff.row, 16, 15);
+        showText("" + Diff.col, 18, 15);
+        String tempDiff;
+        switch (GameWorld.diff) {
+            case 0: tempDiff = "简单"; break;
+            case 1: tempDiff = "中等"; break;
+            case 2: tempDiff = "困难"; break;
+            default: tempDiff = "自定义"; break;
+        }
+        showText(tempDiff, 23, 15);
+    }
+    
+    public void started() {
+        TimeText.startTime = System.currentTimeMillis();   
     }
     
     public void stopped() {

@@ -34,8 +34,8 @@ public class Block extends Actor{
     //处理鼠标单击事件
     public void checkMouse(){     
         //若检测到鼠标的单击事件，则进行处理
-        if (Greenfoot.mouseClicked(this)) {   
-            if (Block.isFirstClick) {
+        if (Greenfoot.mouseClicked(this) && !GameWorld.isOver) {   
+            if (Block.isFirstClick) {  // 当第一次点击block时才会开始计时
                 Block.isStartGame = true;
                 TimeText.startTime = System.currentTimeMillis(); 
                 Block.isFirstClick = false;
@@ -54,12 +54,8 @@ public class Block extends Actor{
                 }
             } else if (mouse.getButton()==1 && !isFlagged) { //若鼠标左键单击方块，同时方块上没插旗子，则进行处理
                 if (isBomb) {                              //若该方块下有地雷，则    
-                    GameWorld world = (GameWorld) getWorld();//获取游戏世界对象
-                    world.showAllBomb();                     //显示世界中所有的地雷
-                    Greenfoot.playSound("bomb.wav");         //播放爆炸音效
-                    //Greenfoot.stop();                        //停止游戏
-                    getWorld().getObjects(SmileIcon.class).get(0).setImage("cry.png");
-                    //TimeText.tempTime = TimeText.playTime;
+                    GameWorld gameWorld = (GameWorld)getWorld();
+                    gameWorld.gameOver(false);
                 } else {                                   //若该方块下没有地雷，则
                     openBlock(this);                         //翻开该方块
                 }                

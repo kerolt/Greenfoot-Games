@@ -25,8 +25,10 @@ public class TimeText extends Text {
     }
     
     public void countTime() {
-        long thisTime = System.currentTimeMillis();
-        playTime = tempTime + (thisTime - startTime) / 1000L;
+        if (!GameWorld.isOver) {
+            long thisTime = System.currentTimeMillis();
+            playTime = tempTime + (thisTime - startTime) / 1000L;
+        }
     }
     
     public void show(long t) {
