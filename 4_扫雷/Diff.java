@@ -47,7 +47,7 @@ public class Diff extends Actor {
     }
     
     /**
-     * 点击事件
+     * 添加点击事件
      */
     public void checkClick() {
         if (Greenfoot.mouseClicked(this)) {
