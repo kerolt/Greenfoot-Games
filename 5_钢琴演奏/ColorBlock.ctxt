@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ColorBlock
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ColorBlock\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=x\ y
+comment1.target=ColorBlock(int,\ int)
+comment2.params=
+comment2.target=void\ init()
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ \u5F69\u8272\u5C0F\u5757\u4F1A\u5728\u5F53\u524D\u7434\u952E\u6240\u5728\u5217\u5411\u4E0A\u79FB\u52A8\uFF0C\u5982\u679C\u78B0\u5230\u8FB9\u754C\u5373\u79FB\u9664\r\n
+numComments=4
