@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Piece
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Piece\ here.\r\n\ \r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=x\ y\ player
+comment1.target=Piece(int,\ int,\ int)
+comment2.params=
+comment2.target=int\ getLocX()
+comment3.params=
+comment3.target=int\ getLocY()
+comment4.params=
+comment4.target=void\ act()
+numComments=5
