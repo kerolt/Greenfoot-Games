@@ -14,12 +14,9 @@ public class GameWorld extends World {
     public static Timer timer;
     public static boolean ballState;
     public static boolean magentState;
+    public static String pattern; // 单人（single）或者双人（double）
     public int clock; //时钟数
-    
-    private String pattern; // 单人（single）或者双人（double）
-    private GreenfootSound bgSound; //背景音乐
-    
-    
+        
     public GameWorld(String pattern) {
         super(1300, 800, 1);
         GameWorld.colorFoodNumber = 1000; // 初始化为1000
@@ -27,13 +24,11 @@ public class GameWorld extends World {
         GameWorld.isStart = false;
         GameWorld.ballState = false;
         GameWorld.magentState = false;
-        this.pattern = pattern;
+        GameWorld.pattern = pattern;
         this.clock = 0;
-        this.bgSound = new GreenfootSound("bg-sound.mp3");
-        bgSound.playLoop();
         init();
         Greenfoot.start();
-    }
+    } 
     
     public void started() {
         this.timer=new Timer();
@@ -45,7 +40,9 @@ public class GameWorld extends World {
     }
     
     public void stopped() {
-        this.timer.cancel();
+        if (this.timer != null) {
+            this.timer.cancel();
+        }
     }
     
     public void act() {
@@ -53,6 +50,8 @@ public class GameWorld extends World {
         checkColorFoodNumber();
         // 按下回车键游戏开始（整局游戏只会执行一次）
         if (!this.isStart && Greenfoot.isKeyDown("enter")) {
+            removeObject(getObjects(TipBoard.class).get(0));
+            removeObject(getObjects(BackButton.class).get(0));
             this.isStart = true;
             // 创建计时器,每秒时钟数+1
             if (this.timer != null) {
@@ -84,8 +83,9 @@ public class GameWorld extends World {
         }
         addObject(new BallFood(), 10 + Greenfoot.getRandomNumber(1250), 1 + Greenfoot.getRandomNumber(750));
         addObject(new MagentFood(), 10 + Greenfoot.getRandomNumber(1250), 1 + Greenfoot.getRandomNumber(750));
-        //addObject(new LimitFood(), 1 + Greenfoot.getRandomNumber(1000), 1 + Greenfoot.getRandomNumber(600));
-        setPaintOrder(GameOver.class, Head.class, Piece.class, MagentFood.class, BallFood.class, ColorFood.class);
+        addObject(new TipBoard(), getWidth() / 2, getHeight() / 2);
+        addObject(new BackButton(), 70, 750);
+        setPaintOrder(GameOver.class, TipBoard.class, BackButton.class, SettlementBoard.class, Head.class, Piece.class, MagentFood.class, BallFood.class, ColorFood.class);
         createColorFood(1000);
         Greenfoot.setSpeed(50); // 1~100
     }
@@ -135,7 +135,15 @@ public class GameWorld extends World {
     /**
      * 游戏结束
      */
-    public void gameOver() {
+    public void gameOver(String pattern, Integer player) {
+        MusicButton.bgSound.pause();
+        GreenfootSound sound = new GreenfootSound("over.mp3");
+        sound.play();
+        Greenfoot.delay(100);
         addObject(new GameOver(), getWidth() / 2, 0);
+        addObject(new SettlementBoard(pattern, player), getWidth() / 2, 800);
+        addObject(new BackButton(), 70, 750);
+        MusicButton.bgSound.playLoop();
+        
     }
 }

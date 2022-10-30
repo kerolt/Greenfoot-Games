@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=MusicButton
+comment0.text=\r\n\ \u64AD\u653E\u97F3\u4E50\u7684\u6309\u94AE\uFF0C\u5176\u4E2D\u6709\u9759\u6001\u5C5E\u6027\uFF1AmusicState\u3001bgSound\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=MusicButton()
+comment2.params=
+comment2.target=void\ act()
+numComments=3

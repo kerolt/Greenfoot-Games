@@ -16,7 +16,7 @@ public class TipWorld extends World
     public TipWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
-        addObject(new BackButton(),90,30);
+        super(1300, 800, 1);
+        addObject(new BackButton(),90,50);
     }
 }

@@ -75,7 +75,7 @@ public class Head extends Actor {
                 //System.out.println("player" + this.player +  ", you loss!");
                 GameWorld.isOver = true;
                 GameWorld world = (GameWorld)getWorld();
-                world.gameOver();
+                world.gameOver(GameWorld.pattern, this.player);
             }
         }
             
@@ -87,15 +87,15 @@ public class Head extends Actor {
     public void checkFood() {
         // 吃到"body+3"食物
         if (isTouching(BallFood.class)) { // 若蛇头碰到食物，且蛇身未达到上限，则
-            this.length += 3; // 蛇身长度增加5个单位
+            this.length += 3; // 蛇身长度增加3个单位
         }
         
         // 吃到“彩色小块”食物
         if (isTouching(ColorFood.class)) {
-            if (this.player == 2) {     //若是人机，则吃到一个彩色块就可以长大一截
+            if (this.player == 2) {     // 若是人机（给人机加buff~），则吃到一个彩色块就可以长大一个单位
                 this.colorFoodNum += 4;
             } else {
-                this.colorFoodNum++;    // 若是玩家，每次吃一个彩色块只能长1/4，即需要吃四个彩色快才可以长大一截
+                this.colorFoodNum++;    // 若是玩家，每次吃一个彩色块只能长1/4，即需要吃四个彩色快才可以长大一个单位
             }
         }
         
@@ -110,9 +110,9 @@ public class Head extends Actor {
             // 应该增加的长度
             int len = list.size() / 4;                 
             this.length += len;
-            // 重新计算当前小蛇吃掉的彩色块数量
+            // 重新计算当前小蛇吃掉的彩色块数量 
             this.colorFoodNum += list.size() - len;    
-        }
+        } 
         
         if (this.colorFoodNum >= 4) {
             this.length++;
@@ -176,7 +176,7 @@ public class Head extends Actor {
             if (this.player == 0 || this.player == 1) { // 若该玩家是真人（0 1）
                 GameWorld.isOver = true;
                 GameWorld world = (GameWorld)getWorld();
-                world.gameOver();
+                world.gameOver(GameWorld.pattern, this.player);
             } else {                                    // 对于机器人（2），碰到边缘会掉头
                 switch (this.direction) {
                     case 0: this.direction = 1; break;

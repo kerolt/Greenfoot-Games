@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SettlementBoard
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ SettlementBoard\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=pattern\ player
+comment1.target=SettlementBoard(java.lang.String,\ java.lang.Integer)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ init()
+numComments=4
