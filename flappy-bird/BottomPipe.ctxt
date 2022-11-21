@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=BottomPipe
+comment0.text=\r\n\ \u4E0B\u65B9\u6C34\u7BA1\u5BF9\u8C61\uFF0C\u7528\u6765\u963B\u6B62\u5C0F\u9E1F\u98DE\u884C\r\n
+comment1.params=player
+comment1.target=BottomPipe(int)
+numComments=2

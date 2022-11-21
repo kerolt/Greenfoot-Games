@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Scroller
+comment0.text=\r\n\ \ \u6EDA\u52A8\u4F53\u5BF9\u8C61\uFF0C\u7528\u6765\u6EDA\u52A8\u663E\u793A\r\n
+comment1.params=player
+comment1.target=Scroller(int)
+comment1.text=\r\n\ @param\ player\ \u53CC\u4EBA\u6A21\u5F0F\u4E0B\uFF0C0\u4EE3\u8868\u5DE6\u8FB9\u73A9\u5BB6\uFF0C1\u4EE3\u8868\u53F3\u8FB9\u73A9\u5BB6\r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ move()
+numComments=4

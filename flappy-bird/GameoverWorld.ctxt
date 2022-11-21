@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=GameoverWorld
+comment0.text=\r\n\ \u6E38\u620F\u7ED3\u675F\u7C7B\r\n
+comment1.params=
+comment1.target=GameoverWorld()
+comment2.params=idx\ w\ h
+comment2.target=void\ drawNumber(int,\ int,\ int)
+comment3.params=
+comment3.target=void\ writeScoreToFile()
+numComments=4
