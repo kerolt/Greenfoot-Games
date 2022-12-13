@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Paddle
+comment0.text=\r\n\ The\ game\ paddle.\ It\ is\ keyboard\ controlled\ (left,\ right,\ space).\ It\ also\ \r\n\ generates\ a\ new\ ball\ when\ it\ is\ created\ itself.\r\n\ \r\n\ @author\ mik\r\n\ @version\ 1.0\r\n
+comment1.params=world
+comment1.target=void\ addedToWorld(greenfoot.World)
+comment1.text=\r\n\ \u5F53\u6321\u677F\u521B\u5EFA\u65F6\uFF0C\u540C\u65F6\u4E5F\u6DFB\u52A0\u4E00\u4E2A\u7403\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ \u5728\u73AF\u5883\u4E2D\u6309\u4E0B\u201Cact\u201D\u6216\u201CRun\u201D\u6309\u94AE\uFF0C\u5C31\u4F1A\u8C03\u7528\u6B64\u65B9\u6CD5\r\n
+comment3.params=dist
+comment3.target=void\ move(int)
+comment4.params=
+comment4.target=void\ newBall()
+comment5.params=
+comment5.target=boolean\ haveBall()
+comment6.params=
+comment6.target=void\ releaseBall()
+comment7.params=
+comment7.target=void\ fire()
+numComments=8

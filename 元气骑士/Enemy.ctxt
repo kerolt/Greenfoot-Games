@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Enemy
+comment0.text=\r\n\ \u654C\u4EBA\r\n
+comment1.params=gif\ HP\ moveBufferTime
+comment1.target=Enemy(GifImage,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=angle\ distance
+comment3.target=void\ move(double,\ double)
+comment4.params=
+comment4.target=void\ attackRole()
+comment5.params=
+comment5.target=boolean\ isTouchWall()
+numComments=6

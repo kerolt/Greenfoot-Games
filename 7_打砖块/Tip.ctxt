@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Tip
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tip\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=title
+comment1.target=Tip(java.lang.String)
+comment2.params=title
+comment2.target=void\ makeImage(java.lang.String)
+comment3.params=
+comment3.target=void\ act()
+numComments=4

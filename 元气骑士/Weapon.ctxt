@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Weapon
+comment0.text=\r\n\ \u6B66\u5668\u7C7B\r\n
+comment1.params=weaponName\ isCatch\ shootBufferTime\ blueConsumption\ attack
+comment1.target=Weapon(java.lang.String,\ boolean,\ int,\ int,\ int)
+comment1.text=\r\n\ @param\ isCatch\ \ \ \ \ \ \ \ \ \u662F\u5426\u88AB\u73A9\u5BB6\u62FE\u8D77\r\n\ @param\ shootBufferTime\ \u5C04\u51FB\u7F13\u51B2\u65F6\u95F4\r\n\ @param\ blueConsumption\ \u8BE5\u6B66\u5668\u7684\u84DD\u8017\u91CF\r\n\ @param\ attack\ \ \ \ \ \ \ \ \ \ \u8BE5\u6B66\u5668\u7684\u653B\u51FB\u529B\r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ roleCatch()
+comment4.params=
+comment4.target=void\ attackEnemy()
+numComments=5

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=FlameGun
+comment0.text=\r\n\ \u706B\u7130\u673A\u67AA\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=weaponName\ isCatch
+comment1.target=FlameGun(java.lang.String,\ boolean)
+numComments=2

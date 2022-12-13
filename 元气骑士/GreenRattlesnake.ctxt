@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=GreenRattlesnake
+comment0.text=\r\n\ \u6B66\u5668-\u7EFF\u8272\u54CD\u5C3E\u86C7\r\n
+comment1.params=weaponName\ isCatch
+comment1.target=GreenRattlesnake(java.lang.String,\ boolean)
+numComments=2

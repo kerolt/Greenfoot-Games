@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Role
+comment0.text=\r\n\ \u73A9\u5BB6\u63A7\u5236\u7684\u89D2\u8272\r\n
+comment1.params=
+comment1.target=Role()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Here\ you\ can\ tell\ your\ actor\ what\ he\ has\ to\ do.\r\n
+comment3.params=
+comment3.target=void\ roleMove()
+comment4.params=
+comment4.target=void\ autoRecoverMP()
+comment5.params=
+comment5.target=void\ autoRecoverArmor()
+comment6.params=
+comment6.target=void\ switchWeapon()
+comment7.params=
+comment7.target=void\ roleDie()
+numComments=8

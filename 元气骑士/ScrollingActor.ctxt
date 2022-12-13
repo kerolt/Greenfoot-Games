@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=ScrollingActor
+comment0.text=\r\n\ This\ class\ contains\ the\ scrolling\ actor.\ This\ actor\ will\ always\ be\ in\ the\ middle\ of\ the\ screen\ and\ the\ objects\ around\ him\ will\ be\ moved.\r\n\ You\ shouldn't\ change\ the\ code\ of\ this\ class\ because\ that\ will\ probably\ cause\ problems\ in\ the\ scrolling\ system.\r\n
+comment1.params=
+comment1.target=ScrollingActor()
+comment2.params=scrollingCenter
+comment2.target=ScrollingActor(boolean)
+comment3.params=world
+comment3.target=void\ addedToWorld(greenfoot.World)
+comment4.params=x\ y
+comment4.target=void\ setLocation(int,\ int)
+comment4.text=\r\n\ An\ extended\ setLocation\ method.\r\n\ You\ should\ not\ change\ this\ method.\ That\ would\ cause\ problems\ in\ the\ programm.\r\n\ \r\n\ @param\ x\r\n\ \ \ \ \ \ The\ new\ x\ location\ of\ the\ actor.\r\n\ \r\n\ @param\ y\r\n\ \ \ \ \ \ The\ new\ x\ location\ of\ the\ actor.\r\n
+comment5.params=x\ y
+comment5.target=void\ setLocation(double,\ double)
+comment5.text=\r\n\ An\ extended\ setLocation\ method\ which\ uses\ double\ values\ for\ the\ coordinates.\r\n\ You\ should\ not\ change\ this\ method.\ That\ would\ cause\ problems\ in\ the\ programm.\r\n\ \r\n\ @param\ x\r\n\ \ \ \ \ \ The\ new\ x\ location\ of\ the\ actor.\r\n\ \r\n\ @param\ y\r\n\ \ \ \ \ \ The\ new\ x\ location\ of\ the\ actor.\r\n
+comment6.params=x\ y\ resetPosition
+comment6.target=void\ setLocation(double,\ double,\ boolean)
+comment6.text=\r\n\ An\ extended\ setLocation\ method\ which\ uses\ double\ values\ for\ the\ coordinates\ and\ doesn't\ always\ reset\ the\ players\ position.\r\n\ You\ should\ not\ change\ this\ method.\ That\ would\ cause\ problems\ in\ the\ programm.\r\n\ \r\n\ @param\ x\r\n\ \ \ \ \ \ The\ new\ x\ location\ of\ the\ actor.\r\n\ \r\n\ @param\ y\r\n\ \ \ \ \ \ The\ new\ x\ location\ of\ the\ actor.\r\n\ \r\n\ @param\ resetPosition\r\n\ \ \ \ \ \ If\ you\ don't\ want\ to\ reset\ the\ players\ position\ this\ value\ has\ to\ be\ false.\r\n
+comment7.params=
+comment7.target=boolean\ isScrollingCenter()
+comment8.params=scrollingCenter
+comment8.target=void\ setScrollingCenter(boolean)
+numComments=9
