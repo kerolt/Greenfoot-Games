@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * 子弹类
+ * 角色武器子弹类
  */
 public class Bullet extends Actor {
     
@@ -29,8 +29,17 @@ public class Bullet extends Actor {
                 // System.out.println(enemy.HP);
                 enemy.HP -= this.attack;
                 if (enemy.HP <= 0) { // 当怪物的血量低于或等于0时被移除
+                    if (getWorld().getObjects(BossStrip.class).size() != 0) { // 如果是BOSS
+                        getWorld().removeObject(getWorld().getObjects(BossStrip.class).get(0));
+                        Level3.bgm.stop();
+                        Greenfoot.delay(50);
+                        Greenfoot.setWorld(new GameOverWorld(0));
+                    }
                     getWorld().removeObject(enemy);
                     randomGenerateMP();
+                    
+                    // 播放怪物死亡的音乐
+                    Music.playMusic("enemy-die.wav", 68);
                 }
             }
             getWorld().removeObject(this);
@@ -42,9 +51,9 @@ public class Bullet extends Actor {
         move(8);
     }
     
-    // 怪物被消灭后有1/4的概率恢复50的蓝
+    // 怪物被消灭后有1/3的概率恢复50的蓝
     public void randomGenerateMP() {
-        int random = Greenfoot.getRandomNumber(4);
+        int random = Greenfoot.getRandomNumber(3);
         if (random == 0) {
             Role.MP = Role.MP + 50 > Role.MAX_MP ? Role.MAX_MP : Role.MP + 50;
         }

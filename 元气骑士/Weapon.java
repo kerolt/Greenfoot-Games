@@ -12,7 +12,7 @@ public class Weapon extends Actor {
     private int shootTime;
     private int blueConsumption; // 蓝耗
     private int attack; // 武器的攻击力
-    private String weaponName; // 武器名
+    public String weaponName; // 武器名
     
     /**
      * @param isCatch         是否被玩家拾起
@@ -23,7 +23,6 @@ public class Weapon extends Actor {
     public Weapon(String weaponName, boolean isCatch, int shootBufferTime, int blueConsumption, int attack) {
         this.isCatch = isCatch;
         this.shootBufferTime = shootBufferTime;
-        // this.attackFlag = true;
         this.shootTime = 0;
         this.blueConsumption = blueConsumption;
         this.attack = attack;
@@ -46,7 +45,7 @@ public class Weapon extends Actor {
         if (this.isCatch && this.shootTime % this.shootBufferTime == 0 && Greenfoot.isKeyDown("j") && Role.MP > 0) {
             Role.MP -= this.blueConsumption;
             // System.out.println(Role.MP);
-            List<Enemy> enemyList = getObjectsInRange(200, Enemy.class);
+            List<Enemy> enemyList = getObjectsInRange(400, Enemy.class);
             int targetX = getWorld().getWidth(), targetY = getWorld().getHeight() / 2;
             int angle = 0;
             if (enemyList.size() != 0) {
@@ -60,6 +59,7 @@ public class Weapon extends Actor {
                     }
                 }
             }
+            Music.playMusic("shoot.wav", 60);
             getWorld().addObject(new Bullet(this.weaponName, targetX, targetY, attack), getX(), getY());
         } 
         this.shootTime++;

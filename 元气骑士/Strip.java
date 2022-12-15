@@ -1,10 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Strip here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 角色属性条
  */
 public class Strip extends FixedObject {
     
@@ -23,7 +20,6 @@ public class Strip extends FixedObject {
             stripImage.setColor(Color.BLUE);
             stripImage.fillRect(0, 0, (int)((double)Role.MP / Role.MAX_MP * 75),10);
         }
-
         setImage(stripImage);
     }
 }

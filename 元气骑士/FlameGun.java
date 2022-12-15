@@ -10,8 +10,8 @@ public class FlameGun extends Weapon {
     
     public boolean isCatch; // 是否被拿起
     private static int shootBufferTime = 10; // 射击缓冲时间
-    private static int blueConsumption = 1; // 蓝耗
-    private static int attack = 2; // 武器的攻击力
+    private static int blueConsumption = 2; // 蓝耗
+    private static int attack = 3; // 武器的攻击力
     private static String weaponName = "火焰机枪"; // 武器名
     
     public FlameGun(String weaponName, boolean isCatch) {

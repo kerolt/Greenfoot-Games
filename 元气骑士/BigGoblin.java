@@ -12,8 +12,9 @@ public class BigGoblin extends Enemy {
     
     private static GifImage gif = new GifImage("enemy/big-goblin.gif");
     private static int moveBufferTime = 50;
+    private static int attack = 2;
     
     public BigGoblin() {
-        super(gif, HP, moveBufferTime);
+        super(gif, HP, moveBufferTime, attack);
     }
 }

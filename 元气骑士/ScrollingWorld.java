@@ -36,7 +36,7 @@ public abstract class ScrollingWorld extends World
     }
     public ScrollingWorld(int screenWidth, int screenHeight, int cellSize) {
         super(screenWidth, screenHeight, cellSize, false);
-        setPaintOrder(Strip.class, RolePanel.class, Weapon.class, Bullet.class, EnemyBullet.class, Role.class, Portal.class, Enemy.class, Door.class, Wall.class, Floor.class);
+        setPaintOrder(Strip.class, RolePanel.class, Weapon.class, Bullet.class, EnemyBullet.class, Role.class, Portal.class, Enemy.class, Boss.class, BossStrip.class, GameProps.class, Wall.class, Floor.class);
         WORLD_WIDTH = 0;
         WORLD_HEIGHT = 0;
     }
@@ -64,7 +64,7 @@ public abstract class ScrollingWorld extends World
             if (actor instanceof ScrollingActor) {
                 ((ScrollingActor) actor).setLocation(actor.getX() + xMovement, actor.getY() + yMovement, false);
             }
-            else if (actor instanceof Menu || actor instanceof FixedObject) {
+            else if (actor instanceof FixedObject) {
                 ;
             }
             else {

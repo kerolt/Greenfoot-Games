@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=EnemyBullet
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ EnemyBullet\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ \u654C\u4EBA\u5B50\u5F39\uFF08Boss\u5E73A\u65F6\u4E5F\u53EF\u4F7F\u7528\uFF09\r\n
 comment1.params=targetX\ targetY\ attack
 comment1.target=EnemyBullet(int,\ int,\ int)
 comment2.params=

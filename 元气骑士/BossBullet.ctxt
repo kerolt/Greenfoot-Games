@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BossBullet
+comment0.text=\r\n\ BOSS\u5B50\u5F39\r\n
+comment1.params=bulletName\ rotation
+comment1.target=BossBullet(java.lang.String,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ attackRole()
+numComments=4

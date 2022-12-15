@@ -8,12 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Shark extends Enemy {
     
-    public static int HP = 25; // 小怪生命值
+    public static int HP = 20; // 小怪生命值
     
     private static GifImage gif = new GifImage("enemy/shark.gif");
     private static int moveBufferTime = 30;
+    private static int attack = 1;
     
     public Shark() {
-        super(gif, moveBufferTime, HP);
+        super(gif, moveBufferTime, HP, attack);
     }
 }

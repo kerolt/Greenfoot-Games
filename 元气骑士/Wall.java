@@ -6,8 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Wall extends Actor {
     
-    public Wall() {
+    public Wall(int type) {
         int random = 1 + Greenfoot.getRandomNumber(2);
-        setImage("map/green" + random + ".png");
+        if (type == 0) { // level1
+            setImage("map/green" + random + ".png");
+        } else { // level2
+            setImage("map/blue" + random + ".png");
+        }
+        
     }
 }

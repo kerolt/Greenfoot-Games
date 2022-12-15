@@ -1,10 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class EnemyBullet here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 敌人子弹（Boss平A时也可使用）
  */
 public class EnemyBullet extends Actor {
     
@@ -30,6 +27,7 @@ public class EnemyBullet extends Actor {
                 Role role = (Role) getOneIntersectingObject(Role.class);
                 if (role.armor <= 0) {
                     role.HP -= this.attack;
+                    Music.playMusic("role-hurt.wav", 70);
                 } else {
                     role.armor -= this.attack;
                 }

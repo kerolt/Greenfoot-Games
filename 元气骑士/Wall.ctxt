@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Wall
 comment0.text=\r\n\ This\ class\ is\ not\ necessary\ for\ the\ scrolling\ system.\r\n\ It's\ just\ to\ visualise\ the\ scrolling\ movement.\r\n
-comment1.params=
-comment1.target=Wall()
+comment1.params=type
+comment1.target=Wall(int)
 numComments=2

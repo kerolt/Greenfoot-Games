@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Level3
+comment0.text=\r\n\ Level3,BOSS\u6218\r\n
+comment1.params=role
+comment1.target=Level3(Role)
+comment2.params=
+comment2.target=void\ started()
+comment3.params=
+comment3.target=void\ stopped()
+comment4.params=
+comment4.target=void\ createWorld()
+numComments=5

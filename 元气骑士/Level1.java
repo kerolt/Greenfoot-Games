@@ -4,19 +4,30 @@ import java.util.*;
  * This subclass is just an example. You can delete it or change the code if you want.
  * It's not necessary for the scrolling system.
  */
-public class Level1 extends ScrollingWorld
-{
+public class Level1 extends ScrollingWorld {
+    
+    public static GreenfootSound bgm = new GreenfootSound("level1-bgm.wav");
+    
     public int centerX = getWidth() / 2;
     public int centerY = getHeight() / 2;
     
     public Level1() {
-        super(1200, 700, 1);//creates an infinite scrolling world with a screen size of 600 x 400;
-        //if you want to limitate the scrolling world you have to use this constructor:
-        //super(600, 400, 1, scrollingWidth, scrollingHeight);
+        super(1200, 700, 1);
         setScrollingBackground(new GreenfootImage("other/bg-black.jpg"));
         createWorld();
         // Greenfoot.start();
         showText("LEVEL 1", 150, 25);
+        Level1.bgm.playLoop();  
+        Level1.bgm.setVolume(20);
+    }
+    
+    public void started() {
+        Level1.bgm.playLoop();  
+        Level1.bgm.setVolume(20);
+    }
+    
+    public void stopped() {
+        Level1.bgm.pause();
     }
     
     public void act() {
@@ -29,13 +40,14 @@ public class Level1 extends ScrollingWorld
         addObject(new FlameGun("火焰机枪", false), getWidth() / 2, getHeight() / 2 + 200);
         addObject(new Glacier("冰川", false), getWidth() / 2 + 100, getHeight() / 2 + 200);
         addObject(new GreenRattlesnake("绿色响尾蛇", false), getWidth() / 2 - 100, getHeight() / 2 + 200);
+        // addObject(new Portal(), centerX + 100, getHeight() / 2); // 测试
         //room1
         createRoom(2, 1, 1, 1, 1);
         aisleY();
         //room2
         setCenter(1, 0);
         createRoom(2, 1, 1, 2, 5);
-        createEnemy(centerX, centerY, 5);
+        createEnemy(centerX, centerY, 6);
         aisleX();
         aisleY();
         //room3        
@@ -45,74 +57,74 @@ public class Level1 extends ScrollingWorld
         //room4
         setCenter(-1, 1);
         createRoom(1, 2, 2, 1, 5);
-        createEnemy(centerX, centerY, 5);
+        createEnemy(centerX, centerY, 6);
         //room5
         setCenter(-1, 0);
         createRoom(1, 2, 1, 2, 5);
-        createEnemy(centerX, centerY, 5);
+        createEnemy(centerX, centerY, 6);
         aisleX();
     }
     
     public void top1() {
         for (int i = 0; i < 17; i++) {
-            addObject(new Wall(), (centerX - 8 * 40) + 40 * (i), centerY - 8 * 40);
+            addObject(new Wall(0), (centerX - 8 * 40) + 40 * (i), centerY - 8 * 40);
         }
     }
     
     public void top2() {
         for (int i = 0; i < 17; i++) {
             if (i != 6 && i != 7 && i != 8 && i != 9 && i !=10) { // 留出口
-                addObject(new Wall(), (centerX - 8 * 40)+ 40 * (i), centerY - 8 * 40);
+                addObject(new Wall(0), (centerX - 8 * 40)+ 40 * (i), centerY - 8 * 40);
             } else {
-                addObject(new Floor(), (centerX - 8 * 40)+ 40 * (i), centerY - 8 * 40);
+                addObject(new Floor(0), (centerX - 8 * 40)+ 40 * (i), centerY - 8 * 40);
             }
         }
     }
     
     public void bottom1() {
         for (int i = 0; i < 17; i++) {
-            addObject(new Wall(), (centerX - 8 * 40) + 40 * (i), centerY + 8 * 40);
+            addObject(new Wall(0), (centerX - 8 * 40) + 40 * (i), centerY + 8 * 40);
         }
     }
     
     public void bottom2() {
         for (int i = 0; i < 17; i++) {
             if (i != 5 && i != 6 && i != 7 && i != 8 && i != 9 && i !=10 && i != 11) { // 留出口
-                addObject(new Wall(), (centerX - 8 * 40)+ 40 * (i), centerY + 8 * 40);
+                addObject(new Wall(0), (centerX - 8 * 40)+ 40 * (i), centerY + 8 * 40);
             } else {
-                addObject(new Floor(), (centerX - 8 * 40)+ 40 * (i), centerY + 8 * 40);
+                addObject(new Floor(0), (centerX - 8 * 40)+ 40 * (i), centerY + 8 * 40);
             }
         }
     }
     
     public void left1() {
         for (int i = 0; i < 17; i++) {
-            addObject(new Wall(), centerX - 8 * 40, (centerY - 8 * 40)+ 40 * (i));
+            addObject(new Wall(0), centerX - 8 * 40, (centerY - 8 * 40)+ 40 * (i));
         }
     }
     
     public void left2() {
         for (int i = 0; i < 16; i++) {
             if (i != 5 && i != 6 && i != 7 && i != 8 && i != 9) { // 留出口
-                addObject(new Wall(), centerX - 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
+                addObject(new Wall(0), centerX - 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
             } else {
-                addObject(new Floor(), centerX - 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
+                addObject(new Floor(0), centerX - 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
             }
         }
     }
     
     public void right1() {
         for (int i = 0; i < 16; i++) {
-            addObject(new Wall(), centerX + 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
+            addObject(new Wall(0), centerX + 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
         }
     }
     
     public void right2() {
         for (int i = 0; i < 16; i++) {
             if (i != 5 && i != 6 && i != 7 && i != 8 && i != 9) { // 留出口
-                addObject(new Wall(), centerX + 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
+                addObject(new Wall(0), centerX + 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
             } else {
-                addObject(new Floor(), centerX + 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
+                addObject(new Floor(0), centerX + 8 * 40, (centerY - 8 * 40) + 40 * (i + 1));
             }
         }
     }
@@ -138,20 +150,20 @@ public class Level1 extends ScrollingWorld
 
     public void aisleX(){
         for(int i = 0; i < 10; i++){
-            addObject(new Wall(), centerX + 8 * 40 + 40 * (i + 1), (centerY - 8 * 40) + 40 * 5);
-            addObject(new Wall(), centerX + 8 * 40 + 40 * (i + 1), (centerY - 8 * 40) + 40 * 11);
+            addObject(new Wall(0), centerX + 8 * 40 + 40 * (i + 1), (centerY - 8 * 40) + 40 * 5);
+            addObject(new Wall(0), centerX + 8 * 40 + 40 * (i + 1), (centerY - 8 * 40) + 40 * 11);
             for (int j = 5; j <= 10; j++) {
-                addObject(new Floor(), centerX + 8 * 40 + 40 * (i + 1), (centerY - 8 * 40) + 40 * j);
+                addObject(new Floor(0), centerX + 8 * 40 + 40 * (i + 1), (centerY - 8 * 40) + 40 * j);
             }
         }    
     }
     
     public void aisleY(){
         for(int i = 0; i < 12; i++){
-            addObject(new Wall(), centerX - 8 * 40 + 40 * 5, (centerY - 8 * 40 - 12* 40) + 40 * (i + 1));
-            addObject(new Wall(), centerX - 8 * 40 + 40 * 11, (centerY - 8 * 40 - 12 * 40) + 40 * (i + 1));
+            addObject(new Wall(0), centerX - 8 * 40 + 40 * 5, (centerY - 8 * 40 - 12* 40) + 40 * (i + 1));
+            addObject(new Wall(0), centerX - 8 * 40 + 40 * 11, (centerY - 8 * 40 - 12 * 40) + 40 * (i + 1));
             for (int j = 5; j <= 10; j++) {
-                addObject(new Floor(), centerX - 8 * 40 + 40 * j, (centerY - 8 * 40) - 40 * (i+1));
+                addObject(new Floor(0), centerX - 8 * 40 + 40 * j, (centerY - 8 * 40) - 40 * (i+1));
             }
         }
     }
@@ -159,31 +171,31 @@ public class Level1 extends ScrollingWorld
     public void roomFloor(int x){
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 16; j++) {
-                addObject(new Floor(), (centerX - 8 * 40) + 40 * (j), centerY - 8 * 40 + 40 * (i + 1));   
+                addObject(new Floor(0), (centerX - 8 * 40) + 40 * (j), centerY - 8 * 40 + 40 * (i + 1));   
             }
         }
         switch(x){
             //十字
             case 1:{
                 for(int i = 1; i <= 9; i++){
-                    addObject(new Wall(), centerX - 5 * 40 + i * 40, centerY);
-                    addObject(new Wall(), centerX, centerY - 5 * 40 + i * 40);
+                    addObject(new Wall(0), centerX - 5 * 40 + i * 40, centerY);
+                    addObject(new Wall(0), centerX, centerY - 5 * 40 + i * 40);
                 }
             }
             break;
             //二横
             case 2:{
                 for(int i = 1; i <= 9; i++){
-                    addObject(new Wall(), centerX - 5 * 40 + i * 40,centerY - 3 * 40);
-                    addObject(new Wall(), centerX - 5 * 40 + i * 40,centerY + 3 * 40);
+                    addObject(new Wall(0), centerX - 5 * 40 + i * 40,centerY - 3 * 40);
+                    addObject(new Wall(0), centerX - 5 * 40 + i * 40,centerY + 3 * 40);
                 }
             }
             break;
             //二竖
             case 3:{
                 for(int i = 1; i <= 9; i++){
-                    addObject(new Wall(), centerX - 3 * 40,centerY - 5 * 40 + i * 40);
-                    addObject(new Wall(), centerX + 3 * 40,centerY - 5 * 40 + i * 40);
+                    addObject(new Wall(0), centerX - 3 * 40,centerY - 5 * 40 + i * 40);
+                    addObject(new Wall(0), centerX + 3 * 40,centerY - 5 * 40 + i * 40);
                 }
             }
             break;
@@ -191,7 +203,7 @@ public class Level1 extends ScrollingWorld
             case 4:{
                 for (int i = 0; i < 7; i++) {
                 for (int j = 0; j < 7; j++) {
-                    addObject(new Wall(), (centerX - 3 * 40) + 40 * (j), centerY - 4 * 40 + 40 * (i + 1));   
+                    addObject(new Wall(0), (centerX - 3 * 40) + 40 * (j), centerY - 4 * 40 + 40 * (i + 1));   
                 }
             }
             }
@@ -200,14 +212,14 @@ public class Level1 extends ScrollingWorld
             case 5:{
                     for (int i = 1; i <= 9; i++) {
                         if(i == 1 || i == 2 || i ==3 || i == 7 || i == 8 || i ==9){
-                            addObject(new Wall(), (centerX - 5 * 40) + i *40, centerY - 4 * 40);
-                            addObject(new Wall(), (centerX - 5 * 40) + i *40, centerY + 4 * 40);
+                            addObject(new Wall(0), (centerX - 5 * 40) + i *40, centerY - 4 * 40);
+                            addObject(new Wall(0), (centerX - 5 * 40) + i *40, centerY + 4 * 40);
                             if(i == 1 || i == 9){
-                                addObject(new Wall(), (centerX - 5 * 40) + i *40, centerY - 4 * 40 + 40);
-                                addObject(new Wall(), (centerX - 5 * 40) + i *40, centerY - 4 * 40 + 80);
-                                addObject(new Wall(), (centerX - 5 * 40) + i *40, centerY + 4 * 40 - 80);
-                                addObject(new Wall(), (centerX - 5 * 40) + i *40, centerY + 4 * 40 - 40);
-                                addObject(new Wall(), (centerX - 5 * 40) + i *40, centerY + 4 * 40);
+                                addObject(new Wall(0), (centerX - 5 * 40) + i *40, centerY - 4 * 40 + 40);
+                                addObject(new Wall(0), (centerX - 5 * 40) + i *40, centerY - 4 * 40 + 80);
+                                addObject(new Wall(0), (centerX - 5 * 40) + i *40, centerY + 4 * 40 - 80);
+                                addObject(new Wall(0), (centerX - 5 * 40) + i *40, centerY + 4 * 40 - 40);
+                                addObject(new Wall(0), (centerX - 5 * 40) + i *40, centerY + 4 * 40);
                             }
                         }
                     }

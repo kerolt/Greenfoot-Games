@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Enemy
 comment0.text=\r\n\ \u654C\u4EBA\r\n
-comment1.params=gif\ HP\ moveBufferTime
-comment1.target=Enemy(GifImage,\ int,\ int)
+comment1.params=gif\ HP\ moveBufferTime\ attack
+comment1.target=Enemy(GifImage,\ int,\ int,\ int)
 comment2.params=
 comment2.target=void\ act()
 comment3.params=angle\ distance
