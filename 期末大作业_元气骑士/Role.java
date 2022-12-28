@@ -11,6 +11,7 @@ public class Role extends ScrollingActor {
     public static int HP;
     public static int MP;
     public static int armor;
+    public static MouseInfo mouseInfo;
     
     private GifImage gif;
     public boolean isStart;
